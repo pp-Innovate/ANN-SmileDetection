@@ -132,7 +132,7 @@ int trainNetwork(void)
         if(result == 1)
             posFaces.push_back(temp);                   //若检测成功，则将人脸添加到正样本容器中
 	}
-    printf("Got %ld positive samples.\n",posFaces.size());
+    printf("Got %d positive samples.\n",(int)posFaces.size());
 
 	/*遍历负样本*/
 	DIR *negDir = opendir(negPath);                  //打开负训练集路径
@@ -162,7 +162,7 @@ int trainNetwork(void)
         if(result == 1)
             negFaces.push_back(temp);                   //若检测成功，则将人脸添加到负样本容器
 	}
-    printf("Got %ld negtive samples.\n",negFaces.size());
+    printf("Got %d negtive samples.\n",(int)negFaces.size());
 
     struct timeval before,after;
 

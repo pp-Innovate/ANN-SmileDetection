@@ -98,7 +98,7 @@ int networkClassify(Mat *image)
             1.1,
             4,
             CASCADE_SCALE_IMAGE|CASCADE_FIND_BIGGEST_OBJECT|CASCADE_DO_ROUGH_SEARCH,
-            Size(20,20));                //在样本中检测人脸，只检测最大的人脸
+            Size(50,50));                //在样本中检测人脸，只检测最大的人脸
 
     if(faces.size() < 1)                 //样本中检测不到人脸
         return -1;
@@ -144,7 +144,7 @@ int detectFaceFormImg(const char *imgFilename,Mat *faceRoi)
 			1.1,
 			6,
 			CASCADE_SCALE_IMAGE|CASCADE_FIND_BIGGEST_OBJECT|CASCADE_DO_ROUGH_SEARCH,
-			Size(20,20));            //在图像中检测人脸
+			Size(40,40));            //在图像中检测人脸
 
     if(faces.size() < 1)             //未检测到人脸
 	{
